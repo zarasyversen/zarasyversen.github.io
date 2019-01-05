@@ -27,7 +27,7 @@
 }
 
 .nav__button {
-  padding: $indent*2 $indent $indent;
+  padding: $indent*3 $indent $indent;
   background: white;
   text-transform: uppercase;
   color: $gray;
@@ -36,6 +36,18 @@
   transition: .5s;
   margin-left: $indent;
   text-align: center;
+
+   @media (min-width: $screen__s){
+    padding-top: $indent*2;
+  }
+
+  .community & {
+    padding: $indent*5 $indent $indent;
+
+    @media (min-width: 510px){
+      padding-top: $indent*2;
+    }
+  }
 
   // Add Hover Gradient Effect
   &:hover,

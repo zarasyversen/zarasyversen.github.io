@@ -38,6 +38,10 @@ h3 {
   .link:focus, .link:hover {
     text-decoration: underline; }
 
+p {
+  font-size: 18px;
+  line-height: 1.6; }
+
 .page__header {
   display: flex;
   flex-direction: row;
@@ -57,7 +61,7 @@ h3 {
       color: white; }
 
 .nav__button {
-  padding: 40px 20px 20px;
+  padding: 60px 20px 20px;
   background: white;
   text-transform: uppercase;
   color: #56494E;
@@ -66,6 +70,14 @@ h3 {
   transition: .5s;
   margin-left: 20px;
   text-align: center; }
+  @media (min-width: 660px) {
+    .nav__button {
+      padding-top: 40px; } }
+  .community .nav__button {
+    padding: 100px 20px 20px; }
+    @media (min-width: 510px) {
+      .community .nav__button {
+        padding-top: 40px; } }
   .nav__button:hover:before, .nav__button:focus:before {
     display: block;
     content: '';
