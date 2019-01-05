@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:900");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 /*
   Used for Gradient Hover Effect
  */
@@ -40,7 +41,12 @@ h3 {
 
 p {
   font-size: 18px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif; }
+
+.image {
+  width: 100%;
+  max-width: 100%; }
 
 .page__header {
   display: flex;
@@ -187,3 +193,24 @@ p {
 .theme--fire {
   background-color: #FBCAEF;
   background-image: linear-gradient(40deg, #F78764 15%, #E637BF 100%); }
+
+.about__wrapper {
+  display: flex; }
+  @media (max-width: 660px) {
+    .about__wrapper {
+      flex-wrap: wrap; } }
+  .about__wrapper img {
+    box-shadow: -5px 5px 0 #f3c1cd, -10px 10px 0 #eb96ab; }
+  .about__wrapper .images {
+    min-width: 300px; }
+    @media (min-width: 1090px) {
+      .about__wrapper .images {
+        min-width: 500px; } }
+  .about__wrapper .content {
+    margin-left: 20px; }
+    .about__wrapper .content p:first-child {
+      margin-top: 0; }
+    @media (max-width: 660px) {
+      .about__wrapper .content {
+        margin-top: 20px;
+        margin-left: 0; } }
