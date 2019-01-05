@@ -1,6 +1,7 @@
 body {
   background: $gray;
   font-family: 'Lato', sans-serif;
+  margin: 0;
 }
 
 .wrapper {
@@ -22,4 +23,27 @@ h3 {
   @media (min-width: $screen__l){
     font-size: 30px;
   }
+}
+
+.link {
+  color: $black;
+  background-color: $mint;
+  text-decoration: none;
+  padding: 0 $indent__xs;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.image {
+  width: 100%;
+  max-width: 100%;
 }
