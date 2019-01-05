@@ -1,7 +1,10 @@
 .about__wrapper {
   display: flex;
-  // flex-wrap: wrap;
   // justify-content: center;
+
+  @media(max-width: $screen__s){
+    flex-wrap: wrap;
+  }
 
   img {
     box-shadow: -5px 5px 0 lighten($rouge, 30%),
@@ -9,7 +12,11 @@
   }
 
   .images {
-    min-width: 500px;
+    min-width: 300px;
+
+    @media(min-width: $screen__l){
+      min-width: 500px;
+    }
   }
 
   .content {
@@ -17,6 +24,11 @@
 
     p:first-child {
       margin-top: 0;
+    }
+
+    @media(max-width: $screen__s){
+      margin-top: $indent;
+      margin-left: 0;
     }
   }
 }
