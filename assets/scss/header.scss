@@ -7,10 +7,13 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  color: white;
 
   @media(min-width: $screen__s){
     width: 80%;
+  }
+
+  h1, h2 {
+    margin: 0;
   }
 
   .home & {
@@ -18,13 +21,13 @@
     margin-top: $indent;
 
     h1, h2 {
-      margin: 0;
+      color: white;
     }
   }
 }
 
 .nav__button {
-  padding: $indent;
+  padding: $indent*3 $indent $indent;
   background: white;
   text-transform: uppercase;
   color: $gray;
@@ -33,6 +36,18 @@
   transition: .5s;
   margin-left: $indent;
   text-align: center;
+
+   @media (min-width: $screen__s){
+    padding-top: $indent*2;
+  }
+
+  .community & {
+    padding: $indent*5 $indent $indent;
+
+    @media (min-width: 510px){
+      padding-top: $indent*2;
+    }
+  }
 
   // Add Hover Gradient Effect
   &:hover,
