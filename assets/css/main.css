@@ -13,11 +13,14 @@ body {
   font-family: 'Lato', sans-serif; }
 
 .wrapper {
-  width: 80%;
+  width: 90%;
   margin: 50px auto 0;
   background: white;
   padding: 20px;
   box-sizing: border-box; }
+  @media (min-width: 660px) {
+    .wrapper {
+      width: 80%; } }
 
 h3 {
   font-size: 20px;
@@ -32,10 +35,16 @@ h3 {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: white; }
   @media (min-width: 660px) {
     .page__header {
       width: 80%; } }
+  .home .page__header {
+    flex-wrap: wrap;
+    margin-top: 20px; }
+    .home .page__header h1, .home .page__header h2 {
+      margin: 0; }
 
 .nav__button {
   padding: 20px;
@@ -44,7 +53,9 @@ h3 {
   color: #56494E;
   text-decoration: none;
   position: relative;
-  transition: .5s; }
+  transition: .5s;
+  margin-left: 20px;
+  text-align: center; }
   .nav__button:hover:before, .nav__button:focus:before {
     display: block;
     content: '';
@@ -52,7 +63,7 @@ h3 {
     top: 0;
     left: 0;
     width: 0;
-    height: 50px;
+    height: 100%;
     background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%);
     mix-blend-mode: screen;
     animation: full-width 1s 1 forwards; }

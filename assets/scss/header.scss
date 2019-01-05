@@ -7,9 +7,19 @@
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  color: white;
 
   @media(min-width: $screen__s){
     width: 80%;
+  }
+
+  .home & {
+    flex-wrap: wrap;
+    margin-top: $indent;
+
+    h1, h2 {
+      margin: 0;
+    }
   }
 }
 
@@ -21,6 +31,8 @@
   text-decoration: none;
   position: relative;
   transition: .5s;
+  margin-left: $indent;
+  text-align: center;
 
   // Add Hover Gradient Effect
   &:hover,
@@ -32,7 +44,7 @@
       top: 0;
       left: 0;
       width: 0;
-      height: 50px;
+      height: 100%;
       background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
       mix-blend-mode: screen;
       animation: full-width 1s 1 forwards;
