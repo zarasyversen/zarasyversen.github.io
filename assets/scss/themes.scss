@@ -3,6 +3,10 @@
   &--pastel {
     background-color: $mint;
     background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+
+    .link {
+      background-color: $mint;
+    }
   }
 
   &--blush {
@@ -11,8 +15,12 @@
   }
 
   &--nature {
-    background-color: $rouge;
+    background-color: $purple;
     background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+
+    .link {
+      background-color: $green ;
+    }
   }
 
   &--bright {
