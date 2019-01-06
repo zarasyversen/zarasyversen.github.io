@@ -1,43 +1,43 @@
 .community {
 
-    .images {
-      text-align: center;
+  .images {
+    text-align: center;
+  }
+
+  .image {
+    max-width: 400px;
+    box-shadow: -5px 5px 0 lighten($green, 30%),
+    -10px 10px 0 lighten($purple, 20%);
+
+    @media(max-width: $screen__m){
+      margin-bottom: $indent;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: $screen__m){
+      flex-wrap: wrap;
     }
 
-    .image {
-      max-width: 400px;
-      box-shadow: -5px 5px 0 lighten($green, 30%),
-      -10px 10px 0 lighten($purple, 20%);
-
-      @media(max-width: $screen__m){
-          margin-bottom: $indent;
-      }
+    &.reverse {
+      flex-direction: row-reverse;
     }
+  }
 
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media(max-width: $screen__m){
-        flex-wrap: wrap;
-      }
-
-      &.reverse {
-        flex-direction: row-reverse;
-      }
+  .introduction {
+    @media(min-width: $screen__m){
+      margin-left: $indent;
     }
+  }
 
-    .introduction {
-      @media(min-width: $screen__m){
-          margin-left: $indent;
-      }
+  .content {
+    @media(min-width: $screen__m){
+      margin-right: $indent;
     }
-
-     .content {
-      @media(min-width: $screen__m){
-        margin-right: $indent;
-      }
-    }
+  }
   
 }
