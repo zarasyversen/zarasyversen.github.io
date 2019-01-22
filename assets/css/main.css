@@ -132,21 +132,20 @@ p {
   transition: .8s;
   background-size: 200%;
   background-position: center left; }
-  .nav__item:after {
+  .nav__item h3:after {
     content: '';
     display: block;
     width: 0;
     height: 5px;
     background: black;
-    transition: .5s; }
+    transition: .5s;
+    margin-top: 20px; }
+  .nav__item h3:hover:after, .nav__item h3:focus:after {
+    width: 100%; }
   .nav__item:hover {
     background-position: center right; }
-    .nav__item:hover:after {
-      width: 100%; }
   .nav__item:focus {
     outline: 0; }
-  .nav__item:hover:after, .nav__item:focus:after {
-    width: 100%; }
   .nav__item.current {
     background-color: #D2F1E4;
     background-image: linear-gradient(60deg, #D2F1E4 15%, #F865B0 100%); }

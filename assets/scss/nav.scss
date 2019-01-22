@@ -19,32 +19,35 @@
     background-size: 200%;
     background-position: center left;
 
-    &:after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 5px;
-      background: black;
-      transition: .5s;
+    h3 {
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        background: black;
+        transition: .5s;
+        margin-top: $indent;
+      }
+
+      &:hover,
+      &:focus {
+        &:after {
+          width: 100%;
+        }
+      }
     }
 
+    
     &:hover {
       background-position: center right;
-      &:after {
-        width: 100%;
-      }
     }
 
     &:focus{
       outline: 0;
     }
 
-    &:hover,
-    &:focus {
-      &:after {
-        width: 100%;
-      }
-    }
+
 
     &.current {
       background-color: $mint;
