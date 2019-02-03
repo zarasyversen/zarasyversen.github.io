@@ -84,7 +84,6 @@ p {
   color: #56494E;
   text-decoration: none;
   position: relative;
-  transition: .5s;
   margin-left: 20px;
   text-align: center; }
   @media (min-width: 660px) {
@@ -116,7 +115,7 @@ p {
     height: 2px;
     background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%); }
   .nav__button:focus {
-    outline: dotted #33cccc 3px; }
+    outline: 4px dotted #000; }
 
 .nav__container {
   display: grid;
@@ -131,13 +130,13 @@ p {
   color: #000;
   text-decoration: none;
   position: relative;
-  transition: .8s;
+  transition: background-position .8s;
   background-size: 200%;
   background-position: center left; }
   .nav__item:hover {
     background-position: center right; }
   .nav__item:focus {
-    outline: 0; }
+    outline: 4px dotted #000; }
   @media (min-width: 875px) {
     .nav__item:after {
       content: '';

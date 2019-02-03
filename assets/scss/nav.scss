@@ -13,7 +13,7 @@
     color: $black;
     text-decoration: none;
     position: relative;
-    transition: .8s;
+    transition: background-position .8s;
 
     // For the Gradient Hover Effect
     background-size: 200%;
@@ -24,7 +24,7 @@
     }
 
     &:focus{
-      outline: 0;
+      outline: $focus-outline
     }
 
     /// After element 
