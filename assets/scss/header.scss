@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: $wrapper__max-width;
   margin: 0 auto;
 
   @media(min-width: $screen__s){
@@ -33,7 +34,6 @@
   color: $gray;
   text-decoration: none;
   position: relative;
-  transition: .5s;
   margin-left: $indent;
   text-align: center;
 
@@ -78,6 +78,6 @@
   }
 
   &:focus {
-    outline: dotted $color-theme-2 3px;
+    outline: $focus-outline;
   }
 }
