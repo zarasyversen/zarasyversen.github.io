@@ -15,8 +15,9 @@ body {
   margin: 0; }
 
 .wrapper {
+  max-width: 1000px;
   width: 90%;
-  margin: 50px auto 0;
+  margin: 50px auto 50px;
   background: white;
   padding: 20px;
   box-sizing: border-box; }
@@ -63,6 +64,7 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: 1000px;
   margin: 0 auto; }
   @media (min-width: 660px) {
     .page__header {
@@ -157,12 +159,18 @@ p {
   .nav__item.background {
     background-color: #EBEBD3;
     background-image: linear-gradient(10deg, #EBEBD3 10%, #DA4167 100%); }
+    @media (min-width: 589px) and (max-width: 660px) {
+      .nav__item.background {
+        grid-column: span 2; } }
     @media (min-width: 1090px) {
       .nav__item.background {
         grid-row: span 2; } }
   .nav__item.community {
     background-color: #DA4167;
     background-image: linear-gradient(60deg, #5de292 15%, #af73bc 100%); }
+    @media (min-width: 589px) and (max-width: 660px) {
+      .nav__item.community {
+        grid-column: span 2; } }
     @media (min-width: 875px) {
       .nav__item.community {
         grid-column: span 2; } }
@@ -176,7 +184,7 @@ p {
     background-color: #FBCAEF;
     background-image: linear-gradient(40deg, #F78764 15%, #E637BF 100%);
     grid-column: 1 / -1; }
-    @media (min-width: 660px) {
+    @media (min-width: 663px) {
       .nav__item.proud-stuff {
         grid-column: 2 / -1; } }
     @media (min-width: 1090px) {

@@ -60,6 +60,10 @@
       background-color: $beige;
       background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
 
+      @media (min-width:589px) and (max-width: $screen__s) {
+        grid-column: span 2;
+      }
+
       @media (min-width: $screen__l) {
         grid-row: span 2;
       }
@@ -69,6 +73,12 @@
     &.community {
       background-color: $rouge;
       background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+
+      // 589 to 660
+      @media (min-width:589px) and (max-width: $screen__s) {
+        grid-column: span 2;
+      }
+      
 
       @media (min-width: $screen__m){
         grid-column: span 2;
@@ -83,6 +93,7 @@
     &.fun-stuff {
       background-color: $yellow;
       background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
+      
     }
     
     &.proud-stuff {
@@ -90,7 +101,7 @@
       background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
       grid-column: 1 / -1;
       
-       @media (min-width: $screen__s) {
+       @media (min-width: $screen__s + 3px) {
         grid-column: 2 / -1;
       }
       
