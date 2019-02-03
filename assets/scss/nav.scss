@@ -19,30 +19,36 @@
     background-size: 200%;
     background-position: center left;
 
-    &:after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 5px;
-      background: black;
-      transition: .5s;
-    }
-
     &:hover {
       background-position: center right;
-      &:after {
-        width: 100%;
-      }
     }
 
     &:focus{
       outline: 0;
     }
 
-    &:hover,
-    &:focus {
+    /// After element 
+    @media(min-width: $screen__m){
       &:after {
-        width: 100%;
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        background: black;
+        transition: .5s;
+      }
+  
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        &:after {
+          width: 100%;
+        }
       }
     }
 
