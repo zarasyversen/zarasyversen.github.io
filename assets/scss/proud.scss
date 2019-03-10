@@ -1,0 +1,26 @@
+.proud {
+  section {
+    border-bottom: 2px dashed $orange;
+    margin: $indent 0;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .list {
+    list-style-type: circle;
+    padding-left: $indent;
+    background: white;
+    margin: 5px;
+  }
+
+  .link {
+    padding: $indent__xs;
+    margin-right: $indent__s;
+  }
+
+  .talks__year {
+    font-weight: 700;
+  }
+}

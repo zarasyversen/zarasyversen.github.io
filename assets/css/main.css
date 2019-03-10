@@ -17,7 +17,7 @@ body {
 .wrapper {
   max-width: 1000px;
   width: 90%;
-  margin: 50px auto 50px;
+  margin: 50px auto;
   background: white;
   padding: 20px;
   box-sizing: border-box; }
@@ -214,6 +214,9 @@ p {
 .theme--fire {
   background-color: #FBCAEF;
   background-image: linear-gradient(40deg, #F78764 15%, #E637BF 100%); }
+  .theme--fire .link {
+    background-color: #E637BF;
+    color: white; }
 
 .about__wrapper {
   display: flex; }
@@ -263,3 +266,22 @@ p {
 @media (min-width: 875px) {
   .community .content {
     margin-right: 20px; } }
+
+.proud section {
+  border-bottom: 2px dashed #F78764;
+  margin: 20px 0; }
+  .proud section:last-child {
+    border: none; }
+
+.proud .list {
+  list-style-type: circle;
+  padding-left: 20px;
+  background: white;
+  margin: 5px; }
+
+.proud .link {
+  padding: 5px;
+  margin-right: 10px; }
+
+.proud .talks__year {
+  font-weight: 700; }
