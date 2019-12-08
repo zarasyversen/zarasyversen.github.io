@@ -8,20 +8,20 @@
   width: 90%;
   max-width: $wrapper__max-width;
   margin: 0 auto;
+  padding: 0 $indent;
+  box-sizing: border-box;
 
   @media(min-width: $screen__s){
     width: 80%;
   }
 
-  h1, h2 {
-    margin: 0;
-  }
-
   .home & {
     flex-wrap: wrap;
-    margin-top: $indent;
+    margin: 30px auto;
+    padding: 0;
 
     h1, h2 {
+      margin: 0;
       color: white;
     }
   }
@@ -34,7 +34,7 @@
   color: $gray;
   text-decoration: none;
   position: relative;
-  margin-left: $indent;
+  margin-left: auto;
   text-align: center;
 
    @media (min-width: $screen__s){

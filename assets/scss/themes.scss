@@ -1,8 +1,8 @@
-
 .theme{
   &--pastel {
-    background-color: $mint;
-    background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+    .heading {
+      background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+    }
 
     .link {
       background-color: $mint;
@@ -10,13 +10,15 @@
   }
 
   &--blush {
-    background-color: $beige;
-    background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+    .heading {
+      background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+    }
   }
 
   &--nature {
-    background-color: $purple;
-    background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+    .heading {
+      background-image: linear-gradient(90deg, $purple 15%, $green 100%);
+    }
 
     .link {
       background-color: $green;
@@ -24,13 +26,21 @@
   }
 
   &--bright {
-    background-color: $yellow;
-    background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
+
+    .heading {
+      background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
+    }
+
+    .link {
+      background-color: $yellow;
+    }
   }
 
   &--fire {
-    background-color: $lightpink;
-    background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
+   
+    .heading {
+      background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
+    }
 
     .link {
       background-color: $magenta;
