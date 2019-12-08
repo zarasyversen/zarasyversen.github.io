@@ -1,8 +1,16 @@
+@mixin text-gradient{
+  background: -webkit-linear-gradient($dir, $color1, $color2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .theme{
   &--pastel {
-    background-color: $mint;
-    background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+    .heading {
+      background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .link {
       background-color: $mint;
@@ -10,8 +18,12 @@
   }
 
   &--blush {
-    background-color: $beige;
-    background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+
+    .heading {
+      background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &--nature {

@@ -8,13 +8,24 @@ body {
   max-width: $wrapper__max-width;
   width: 90%;
   margin: 50px auto;
-  background: white;
   padding: $indent;
   box-sizing: border-box;
 
   @media(min-width: $screen__s){
     width: 80%;
+    margin: 0 auto 50px;
   }
+}
+
+.page__content {
+  background: white;
+  padding: 20px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 40px;
+  display: inline-block;
 }
 
 h3 {
