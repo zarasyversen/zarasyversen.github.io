@@ -6,13 +6,10 @@ body {
 
 .wrapper {
   max-width: $wrapper__max-width;
-  width: 90%;
   margin: 50px auto;
   padding: $indent;
-  box-sizing: border-box;
 
   @media(min-width: $screen__s){
-    width: 80%;
     margin: 0 auto 50px;
   }
 }
@@ -20,6 +17,7 @@ body {
 .page__content {
   background: white;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .heading {

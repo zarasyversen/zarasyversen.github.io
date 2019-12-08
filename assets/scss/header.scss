@@ -2,82 +2,87 @@
 
 .page__header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 90%;
-  max-width: $wrapper__max-width;
+  justify-content: space-between;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 $indent;
-  box-sizing: border-box;
-
-  @media(min-width: $screen__s){
-    width: 80%;
-  }
+  background: white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 
   .home & {
+    max-width: $wrapper__max-width;
     flex-wrap: wrap;
     margin: 30px auto;
     padding: 0;
+    background: transparent;
 
     h1, h2 {
       margin: 0;
       color: white;
     }
   }
+
+  @media(min-width: $screen__l){
+    margin: 0 auto 30px;
+  }
 }
 
-.nav__button {
-  padding: $indent*3 $indent $indent;
-  background: white;
-  text-transform: uppercase;
-  color: $gray;
-  text-decoration: none;
-  position: relative;
-  margin-left: auto;
-  text-align: center;
+.nav {
+  width: 100%;
+  max-width: $wrapper__max-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 
-   @media (min-width: $screen__s){
-    padding-top: $indent*2;
-  }
+  &__link {
+    position: relative;
+    display: block;
+    color: $gray;
+    padding: 20px;
+    background: white;
+    text-decoration: none;
+    margin: 0 10px;
 
-  .community & {
-    padding: $indent*5 $indent $indent;
-
-    @media (min-width: 510px){
-      padding-top: $indent*2;
-    }
-  }
-
-  // Add Hover Gradient Effect
-  &:hover,
-  &:focus{
-    &:before {
-      display: block;
-      content:'';
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
-      mix-blend-mode: screen;
-      animation: full-width 1s 1 forwards;
+    @media(min-width: $screen__l) {
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
     }
 
-    &:after {
-      display: block;
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+    // Add Hover Gradient Effect
+    &:hover,
+    &:focus{
+      &:before {
+        display: block;
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+        mix-blend-mode: screen;
+        animation: full-width 1s 1 forwards;
+      }
+    }
+
+    &:focus {
+      outline: $focus-outline;
     }
   }
+}
 
-  &:focus {
-    outline: $focus-outline;
-  }
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
