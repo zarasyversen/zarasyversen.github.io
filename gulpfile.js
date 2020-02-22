@@ -12,3 +12,11 @@ gulp.task('sass', function () {
     }))
     .pipe(gulp.dest('./assets/test'));
 });
+
+gulp.task('run', gulp.parallel('sass'));
+
+gulp.task('watch', function() {
+    gulp.watch('./assets/scss/*.scss', gulp.parallel('sass'));
+});
+
+gulp.task('default', gulp.parallel('run', 'watch'));
