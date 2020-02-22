@@ -1,22 +1,20 @@
-
+//
+// Nav : Page Navigation
+//
 
 .page__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   margin: 0 auto;
-  background: white;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+  position: relative;
+  max-width: $wrapper__max-width;
 
   .home & {
-    max-width: $wrapper__max-width;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 0;
-    background: transparent;
+    align-items: flex-start;
+    margin: 30px auto 0;
 
     h1, h2 {
       margin: 0;
@@ -26,63 +24,10 @@
 
   @media(min-width: $screen__l){
     margin: 0 auto 30px;
-  }
-}
 
-.nav {
-  width: 100%;
-  max-width: $wrapper__max-width;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-
-  &__link {
-    position: relative;
-    display: block;
-    color: $gray;
-    padding: 20px;
-    background: white;
-    text-decoration: none;
-    margin: 0 10px;
-
-    @media(min-width: $screen__l) {
-      &:first-child {
-        padding-left: 0;
-        margin-left: 0;
-      }
-    }
-
-    // Add Hover Gradient Effect
-    &:hover,
-    &:focus{
-      &:before {
-        display: block;
-        content:'';
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
-        mix-blend-mode: screen;
-        animation: full-width 1s 1 forwards;
-      }
-    }
-
-    &:focus {
-      outline: $focus-outline;
+    .home & {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
-}
-
-i {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }

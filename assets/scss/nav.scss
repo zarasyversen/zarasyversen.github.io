@@ -1,120 +1,71 @@
-.nav {
-  &__container {
-    display: grid;
-    min-height: 400px;
-    margin: 0 auto;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//
+// Nav : Sidebar Navigation
+//
+
+
+//
+// Nav : Toggle
+//
+.main-nav-toggle {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+//
+// Nav : Sidebar
+//
+.main-nav {
+  transform: translateX(400%);
+  transition: transform .3s;
+  position: absolute;
+  top: 0;
+  min-width: 300px;
+
+  &.is-open {
+    transform: translateX(0);
   }
-  
-  &__item {
-    padding: $indent;
-    box-sizing: border-box;
-    color: $black;
-    text-decoration: none;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__link {
     position: relative;
-    transition: background-position .8s;
+    display: block;
+    color: $gray;
+    padding: 20px;
+    background: white;
+    text-decoration: none;
+    margin: 0 10px;
 
-    // For the Gradient Hover Effect
-    background-size: 200%;
-    background-position: center left;
-
-    &:hover {
-      background-position: center right;
+    @media(min-width: $screen__l) {
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
     }
 
+    // Add Hover Gradient Effect
+    &:hover,
     &:focus{
-      outline: $focus-outline
-    }
-
-    /// After element 
-    @media(min-width: $screen__m){
-      &:after {
-        content: '';
+      &:before {
         display: block;
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
         width: 0;
-        height: 5px;
-        background: black;
-        transition: .5s;
-      }
-  
-      &:hover {
-        &:after {
-          width: 100%;
-        }
-      }
-
-      &:hover,
-      &:focus {
-        &:after {
-          width: 100%;
-        }
+        height: 100%;
+        background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+        mix-blend-mode: screen;
+        animation: full-width 1s 1 forwards;
       }
     }
 
-    &.current {
-      background-color: $mint;
-      background-image: linear-gradient(60deg, $mint 15%, $pink 100%);
-
-      @media (min-width: $screen__l) {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-    }
-    
-    &.background {
-      background-color: $beige;
-      background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
-
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-
-      @media (min-width: $screen__l) {
-        grid-row: span 2;
-      }
-      
-    }
-    
-    &.community {
-      background-color: $rouge;
-      background-image: linear-gradient(60deg, $green 15%, $purple 100%);
-
-      // 589 to 660
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-      
-
-      @media (min-width: $screen__m){
-        grid-column: span 2;
-      }
-      
-       @media (min-width: $screen__l) {
-        grid-row: span 3;
-      }
-
-    }
-    
-    &.fun-stuff {
-      background-color: $yellow;
-      background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
-      
-    }
-    
-    &.proud-stuff {
-      background-color: $lightpink;
-      background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
-      grid-column: 1 / -1;
-      
-       @media (min-width: $screen__s + 3px) {
-        grid-column: 2 / -1;
-      }
-      
-      @media (min-width: $screen__l) {
-        grid-column: span 2;
-      }
-      
+    &:focus {
+      outline: $focus-outline;
     }
   }
 }

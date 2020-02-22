@@ -6,12 +6,8 @@ body {
 
 .wrapper {
   max-width: $wrapper__max-width;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   padding: $indent;
-
-  @media(min-width: $screen__s){
-    margin: 0 auto 50px;
-  }
 }
 
 .page__content {

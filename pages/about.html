@@ -9,32 +9,55 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
   </head>
   <body class="about theme--blush">
-    <header class="page__header">
-      <nav class="nav">
-      <a href="../index.html" class="nav__link">Home</a>
-      <a href="current.html" class="nav__link">Currently</a>
-      <a href="about.html" class="nav__link">About</a>
-      <a href="community.html" class="nav__link">Community</a>
-      <a href="proudstuff.html" class="nav__link">Proud</a>
-      <a href="funstuff.html" class="nav__link">Fun</a>
-    </nav>
-  </header>
-    </header>
-    <main class="wrapper">
-      <h1 class="heading">Where I am from</h1>
-      <div class="page__content about__wrapper">
-        <div class="images">
-          <img class="image" src="../assets/images/home.jpg" alt="Picture of my house in Sweden."/>
-          <img class="image" src="../assets/images/lukas.jpg" alt="Picture of a lake with a dog looking over it."/>
+    <div class="wrapper">
+      <header class="page__header">
+        <h1 class="heading">Where I am from</h1>
+        <button type="button" class="main-nav-toggle js-nav-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20">
+            <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="square" stroke-width="2">
+              <path d="M1.5 1.5h24M1.5 9.5h24M1.5 18.5h24"/>
+            </g>
+          </svg>
+        </button>
+        <nav class="main-nav js-main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="../index.html" class="main-nav__link">Home</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="current.html" class="main-nav__link">Currently</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="about.html" class="main-nav__link">About</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="community.html" class="main-nav__link">Community</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="proudstuff.html" class="main-nav__link">Proud</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="funstuff.html" class="main-nav__link">Fun</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="page__content about__wrapper">
+          <div class="images">
+            <img class="image" src="../assets/images/home.jpg" alt="Picture of my house in Sweden."/>
+            <img class="image" src="../assets/images/lukas.jpg" alt="Picture of a lake with a dog looking over it."/>
+          </div>
+          <div class="content">
+           <p>I grew up in a very rural area called Svenshöjden in Sweden. It's a quite place, very few neighbours, no traffic and there is 30 minutes drive to the closest shop. I go back few times a year as my parents still live here.</p>
+           <p>Before moving to Brighton in 2015, I lived and worked in Norway for 2 years. In 2012, I also spent 6 months in Richmond, Virginia as a part of an exchange at university.</p>
+           <p>At university, I studied Visual Communication and Design. I always knew I wanted to work with something creative but I wasn't sure what that was. I used to play around with web design a bit in my spare time but didn't realise it was a profession.</p>
+           <p>After 2 years in Norway, I wanted to move abroad again and came across a web design diploma course in Hove. I decided to go for it, moved to Brighton and this diploma ignited my passion for web development.</p>
+           <p>The diploma lasted 6 months and during this time, I realised Brighton would be a great place to start my new career so I decided to stay here. I started to attend codebar, I spent a year building up skills and my portfolio. Then the magic happened - thanks to connections I made from codebar, I got offered a junior position at Gene!</p>
+          </div>
         </div>
-        <div class="content">
-         <p>I grew up in a very rural area called Svenshöjden in Sweden. It's a quite place, very few neighbours, no traffic and there is 30 minutes drive to the closest shop. I go back few times a year as my parents still live here.</p>
-         <p>Before moving to Brighton in 2015, I lived and worked in Norway for 2 years. In 2012, I also spent 6 months in Richmond, Virginia as a part of an exchange at university.</p>
-         <p>At university, I studied Visual Communication and Design. I always knew I wanted to work with something creative but I wasn't sure what that was. I used to play around with web design a bit in my spare time but didn't realise it was a profession.</p>
-         <p>After 2 years in Norway, I wanted to move abroad again and came across a web design diploma course in Hove. I decided to go for it, moved to Brighton and this diploma ignited my passion for web development.</p>
-         <p>The diploma lasted 6 months and during this time, I realised Brighton would be a great place to start my new career so I decided to stay here. I started to attend codebar, I spent a year building up skills and my portfolio. Then the magic happened - thanks to connections I made from codebar, I got offered a junior position at Gene!</p>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>
