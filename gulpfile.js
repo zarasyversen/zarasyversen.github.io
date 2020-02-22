@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     .pipe(uglifycss({
       "uglyComments": true
     }))
-    .pipe(gulp.dest('./assets/test'));
+    .pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('run', gulp.parallel('sass'));
