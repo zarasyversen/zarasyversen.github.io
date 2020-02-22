@@ -4,17 +4,35 @@ body {
   margin: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.visually-hidden { 
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 .wrapper {
   max-width: $wrapper__max-width;
-  width: 90%;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   padding: $indent;
-  box-sizing: border-box;
-
-  @media(min-width: $screen__s){
-    width: 80%;
-    margin: 0 auto 50px;
-  }
 }
 
 .page__content {

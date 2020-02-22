@@ -1,120 +1,105 @@
-.nav {
-  &__container {
-    display: grid;
-    min-height: 400px;
-    margin: 0 auto;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//
+// Nav : Sidebar Navigation
+//
+
+
+//
+// Nav : Overlay
+//
+.main-nav-overlay {
+  border: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border-radius: 0;
+  display: none;
+  transition: background .3s;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.7);
   }
-  
+
+  .nav-is-open & {
+    display: block;
+  }
+}
+
+//
+// Nav : Sidebar
+//
+.main-nav {
+  transform: translateX(400%);
+  transition: transform .3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  min-width: 300px; 
+  background: $gray;
+  height: 100%;
+  padding: 10px 20px 0;
+
+  .nav-is-open & {
+    transform: translateX(0);
+  }
+
+  &__close {
+    display: block;
+    margin: 0 0 0 auto;
+    padding: 10px;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
   &__item {
-    padding: $indent;
-    box-sizing: border-box;
-    color: $black;
-    text-decoration: none;
+    margin: 0 0 10px;
+    padding: 0;
+
+    &.home {
+      background: white;
+    }
+
+    &:focus {
+      outline: $focus-outline;
+    }
+  }
+
+  &__link {
     position: relative;
-    transition: background-position .8s;
+    display: block;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 20px;
+    color: $black;
 
-    // For the Gradient Hover Effect
-    background-size: 200%;
-    background-position: center left;
+    &.home {
 
-    &:hover {
-      background-position: center right;
-    }
-
-    &:focus{
-      outline: $focus-outline
-    }
-
-    /// After element 
-    @media(min-width: $screen__m){
-      &:after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 5px;
-        background: black;
-        transition: .5s;
-      }
-  
-      &:hover {
-        &:after {
-          width: 100%;
-        }
-      }
-
+      // Add Hover Gradient Effect
       &:hover,
-      &:focus {
-        &:after {
-          width: 100%;
+      &:focus{
+        &:before {
+          display: block;
+          content:'';
+          position:absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+          mix-blend-mode: screen;
+          animation: full-width 1s 1 forwards;
         }
       }
-    }
-
-    &.current {
-      background-color: $mint;
-      background-image: linear-gradient(60deg, $mint 15%, $pink 100%);
-
-      @media (min-width: $screen__l) {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-    }
-    
-    &.background {
-      background-color: $beige;
-      background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
-
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-
-      @media (min-width: $screen__l) {
-        grid-row: span 2;
-      }
-      
-    }
-    
-    &.community {
-      background-color: $rouge;
-      background-image: linear-gradient(60deg, $green 15%, $purple 100%);
-
-      // 589 to 660
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-      
-
-      @media (min-width: $screen__m){
-        grid-column: span 2;
-      }
-      
-       @media (min-width: $screen__l) {
-        grid-row: span 3;
-      }
-
-    }
-    
-    &.fun-stuff {
-      background-color: $yellow;
-      background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
-      
-    }
-    
-    &.proud-stuff {
-      background-color: $lightpink;
-      background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
-      grid-column: 1 / -1;
-      
-       @media (min-width: $screen__s + 3px) {
-        grid-column: 2 / -1;
-      }
-      
-      @media (min-width: $screen__l) {
-        grid-column: span 2;
-      }
-      
     }
   }
 }
