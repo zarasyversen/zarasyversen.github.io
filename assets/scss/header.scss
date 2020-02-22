@@ -9,6 +9,7 @@
   margin: 0 auto;
   position: relative;
   max-width: $wrapper__max-width;
+  padding: 0 0 10px;
 
   .home & {
     flex-direction: column;
@@ -24,6 +25,7 @@
 
   @media(min-width: $screen__l){
     margin: 0 auto 30px;
+    padding: 0;
 
     .home & {
       flex-direction: row;
