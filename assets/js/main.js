@@ -1,8 +1,10 @@
-var menuBtn = document.querySelector('.js-nav-toggle');
+var menuActions = document.querySelectorAll('.js-nav-toggle');
 
 function toggleMenu(){
-  const mainMenu = document.querySelector('.js-main-nav');
-  mainMenu.classList.toggle('is-open');
+  const body = document.querySelector('body');
+  body.classList.toggle('nav-is-open');
 }
 
-menuBtn.addEventListener('click', toggleMenu)
+for (var i = 0; i < menuActions.length; i++) {
+  menuActions[i].addEventListener('click', toggleMenu);
+}

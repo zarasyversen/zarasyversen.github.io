@@ -13,7 +13,9 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./assets/css'));
 });
 
+// Gulp.parallel vs Gulp.series
 gulp.task('run', gulp.parallel('sass'));
+
 
 gulp.task('watch', function() {
     gulp.watch('./assets/scss/*.scss', gulp.parallel('sass'));
