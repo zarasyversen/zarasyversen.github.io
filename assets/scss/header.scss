@@ -1,83 +1,35 @@
-
+//
+// Nav : Page Navigation
+//
 
 .page__header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 90%;
-  max-width: $wrapper__max-width;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 0 $indent;
-  box-sizing: border-box;
-
-  @media(min-width: $screen__s){
-    width: 80%;
-  }
+  position: relative;
+  max-width: $wrapper__max-width;
+  padding: 0 0 10px;
 
   .home & {
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 0;
+    align-items: flex-start;
+    margin: 30px auto 0;
 
     h1, h2 {
       margin: 0;
       color: white;
     }
   }
-}
 
-.nav__button {
-  padding: $indent*3 $indent $indent;
-  background: white;
-  text-transform: uppercase;
-  color: $gray;
-  text-decoration: none;
-  position: relative;
-  margin-left: auto;
-  text-align: center;
+  @media(min-width: $screen__l){
+    margin: 0 auto 30px;
+    padding: 0;
 
-   @media (min-width: $screen__s){
-    padding-top: $indent*2;
-  }
-
-  .community & {
-    padding: $indent*5 $indent $indent;
-
-    @media (min-width: 510px){
-      padding-top: $indent*2;
+    .home & {
+      flex-direction: row;
+      justify-content: space-between;
     }
-  }
-
-  // Add Hover Gradient Effect
-  &:hover,
-  &:focus{
-    &:before {
-      display: block;
-      content:'';
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
-      mix-blend-mode: screen;
-      animation: full-width 1s 1 forwards;
-    }
-
-    &:after {
-      display: block;
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
-    }
-  }
-
-  &:focus {
-    outline: $focus-outline;
   }
 }
