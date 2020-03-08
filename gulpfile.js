@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uglifycss = require('gulp-uglifycss');
-var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
  
 sass.compiler = require('node-sass');
@@ -16,6 +15,9 @@ function style() {
         .pipe(sass())
         .on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
+        .pipe(uglifycss({
+          "uglyComments": true
+        }))
         .pipe(gulp.dest('./assets/css')
     );
 }
@@ -23,6 +25,8 @@ function style() {
 exports.style = style;
 
 // gulp.task('run', gulp.parallel('sass'));
+
+
 
 // gulp.task('watch', function() {
 //     gulp.watch('./assets/scss/*.scss', gulp.parallel('sass'));
