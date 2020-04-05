@@ -1,24 +1,37 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
  
-sass.compiler = require('node-sass');
- 
-gulp.task('sass', function () {
-  return gulp.src('./assets/scss/main.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(uglifycss({
-      "uglyComments": true
-    }))
-    .pipe(gulp.dest('./assets/css'));
-});
 
-// Gulp.parallel vs Gulp.series
-gulp.task('run', gulp.parallel('sass'));
+// Style
+function style() {
+    return gulp.src('./assets/scss/main.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./assets/css'))
+        .pipe(browserSync.stream())
+}
 
+// Watch for file changes
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 
-gulp.task('watch', function() {
-    gulp.watch('./assets/scss/*.scss', gulp.parallel('sass'));
-});
+    gulp.watch('./assets/scss/*.scss', style);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+}
 
-gulp.task('default', gulp.parallel('run', 'watch'));
+exports.style = style;
+exports.watch = watch;
+
+// Default function when you run gulp
+exports.default = function () {
+    watch();
+}

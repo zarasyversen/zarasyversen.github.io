@@ -9,13 +9,13 @@
   margin: 0 auto;
   position: relative;
   max-width: $wrapper__max-width;
-  padding: 0 0 10px;
+  padding: 0 0 $indent__s;
 
   .home & {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin: 30px auto 0;
+    margin: $indent__l auto 0;
 
     h1, h2 {
       margin: 0;
@@ -24,7 +24,7 @@
   }
 
   @media(min-width: $screen__l){
-    margin: 0 auto 30px;
+    margin: 0 auto $indent__l;
     padding: 0;
 
     .home & {

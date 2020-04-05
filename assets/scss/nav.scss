@@ -15,7 +15,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   border-radius: 0;
   display: none;
@@ -23,7 +23,7 @@
 
   &:hover,
   &:focus {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   .nav-is-open & {
@@ -44,7 +44,7 @@
   min-width: 300px; 
   background: $gray;
   height: 100%;
-  padding: 10px 20px 0;
+  padding: $indent $indent 0;
 
   .nav-is-open & {
     transform: translateX(0);
@@ -53,7 +53,7 @@
   &__close {
     display: block;
     margin: 0 0 0 auto;
-    padding: 10px;
+    padding: $indent__s;
   }
 
   &__list {
@@ -62,7 +62,7 @@
   }
 
   &__item {
-    margin: 0 0 10px;
+    margin: 0 0 $indent__s;
     padding: 0;
 
     &.home {
@@ -78,8 +78,8 @@
     position: relative;
     display: block;
     text-decoration: none;
-    margin: 0 10px;
-    padding: 20px;
+    margin: 0 $indent__s;
+    padding: $indent;
     color: $black;
 
     &.home {
@@ -102,4 +102,5 @@
       }
     }
   }
+
 }

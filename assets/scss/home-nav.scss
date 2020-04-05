@@ -11,7 +11,7 @@
     display: grid;
     min-height: 400px;
     margin: 0 auto;
-    grid-gap: 20px;
+    grid-gap: $indent;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   
