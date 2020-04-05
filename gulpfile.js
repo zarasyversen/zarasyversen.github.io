@@ -4,7 +4,6 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
  
-
 // Style
 function style() {
     return gulp.src('./assets/scss/main.scss')
@@ -25,13 +24,11 @@ function watch() {
     });
 
     gulp.watch('./assets/scss/*.scss', style);
-    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./**/*.html').on('change', browserSync.reload);
 }
 
 exports.style = style;
 exports.watch = watch;
 
 // Default function when you run gulp
-exports.default = function () {
-    watch();
-}
+exports.default = gulp.series(watch);
