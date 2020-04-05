@@ -1,26 +1,22 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const uglifycss = require('gulp-uglifycss');
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
  
 
 // Style
 function style() {
-  
     return gulp.src('./assets/scss/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sourcemaps.identityMap())
-        .pipe(sass())
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(uglifycss({
-          "uglyComments": true
-        }))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream())
 }
 
-// Watch
+// Watch for file changes
 function watch() {
     browserSync.init({
         server: {
@@ -30,16 +26,12 @@ function watch() {
 
     gulp.watch('./assets/scss/*.scss', style);
     gulp.watch('./*.html').on('change', browserSync.reload);
-
 }
 
 exports.style = style;
 exports.watch = watch;
 
-// Default function 
-// Watch for change in .scss and recompile styles
+// Default function when you run gulp
 exports.default = function () {
     watch();
 }
-
-
