@@ -1,36 +1,45 @@
-const {src, dest, watch} = require('gulp');
+const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglifycss = require('gulp-uglifycss');
 const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
  
-sass.compiler = require('node-sass');
 
 // Style
-// Update SourceMaps, Minimise(Uglify) and Compile to CSS.
 function style() {
   
-    return (
-      src('./assets/scss/main.scss')
+    return gulp.src('./assets/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.identityMap())
         .pipe(sass())
-        .on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
         .pipe(uglifycss({
           "uglyComments": true
         }))
-        .pipe(dest('./assets/css')
-    );
+        .pipe(gulp.dest('./assets/css'))
+        .pipe(browserSync.stream())
+}
+
+// Watch
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch('./assets/scss/*.scss', style);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+
 }
 
 exports.style = style;
-
+exports.watch = watch;
 
 // Default function 
 // Watch for change in .scss and recompile styles
-exports.default = function() {
-    watch('./assets/scss/*.scss', style);
-};
-
+exports.default = function () {
+    watch();
+}
 
 
