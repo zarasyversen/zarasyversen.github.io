@@ -31,4 +31,4 @@ exports.style = style;
 exports.watch = watch;
 
 // Default function when you run gulp
-exports.default = gulp.series(watch);
+exports.default = watch;
