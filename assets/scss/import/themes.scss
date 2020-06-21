@@ -1,6 +1,6 @@
-.theme{
+.theme {
   &--pastel {
-    .heading {
+    .page__content {
       background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
     }
 
@@ -10,13 +10,13 @@
   }
 
   &--blush {
-    .heading {
+    .page__content {
       background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
     }
   }
 
   &--nature {
-    .heading {
+    .page__content {
       background-image: linear-gradient(90deg, $purple 15%, $green 100%);
     }
 
@@ -27,7 +27,7 @@
 
   &--bright {
 
-    .heading {
+    .page__content {
       background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
     }
 
@@ -38,7 +38,7 @@
 
   &--fire {
    
-    .heading {
+    .page__content {
       background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
     }
 
@@ -46,5 +46,27 @@
       background-color: $magenta;
       color: white;
     }
+  }
+}
+
+.background {
+  &--yellow {
+    @include yellow-gradient;
+  }
+
+  &--mint {
+    @include mint-gradient;
+  }
+
+  &--pastel {
+    @include pastel-gradient;
+  }
+
+  &--aqua {
+    @include aqua-gradient;
+  }
+
+  &--pink {
+     @include pink-gradient;
   }
 }

@@ -42,7 +42,7 @@
   right: 0;
   z-index: 2;
   min-width: 300px; 
-  background: $gray;
+  background: $color--light-grey;
   height: 100%;
   padding: $indent $indent 0;
 
@@ -68,10 +68,6 @@
     &.home {
       background: white;
     }
-
-    &:focus {
-      outline: $focus-outline;
-    }
   }
 
   &__link {
@@ -81,6 +77,10 @@
     margin: 0 $indent__s;
     padding: $indent;
     color: $black;
+
+    &:focus {
+      outline: $focus-outline;
+    }
 
     &.home {
 
@@ -103,4 +103,72 @@
     }
   }
 
+}
+
+@media(min-width: $screen__l) {
+  .main-nav {
+    position: static;
+    display: block;
+    transform: translateX(0);
+    background: transparent;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $wrapper__max-width;
+
+    &__close,
+    &-toggle {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      margin: 0;
+    }
+
+    &__item {
+      background: white;
+      flex-grow: 1;
+      position: relative;
+      margin: $indent__s;
+      text-align: center;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        width: 100%;
+        background: white;
+      }
+
+      &.is-active {
+        &:after {
+          background: black;
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      padding: $indent__s;
+
+      &:hover {
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          @include pink-gradient;
+          mix-blend-mode: screen;
+          animation: full-width 1s 1 forwards;
+        }
+      }
+
+    }
+
+  }
 }

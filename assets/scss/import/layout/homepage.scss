@@ -24,17 +24,9 @@
     color: $black;
     text-decoration: none;
     position: relative;
-    transition: background-position .8s;
+    @include gradient-background-properties;
 
-    // For the Gradient Hover Effect
-    background-size: 200%;
-    background-position: center left;
-
-    &:hover {
-      background-position: center right;
-    }
-
-    &:focus{
+    &:focus {
       outline: $focus-outline
     }
 
@@ -69,8 +61,7 @@
     // Item : Current
     //
     &.current {
-      background-color: $mint;
-      background-image: linear-gradient(60deg, $mint 15%, $pink 100%);
+      @include mint-gradient;
 
       @media (min-width: $screen__l) {
         grid-column: span 2;
@@ -82,8 +73,7 @@
     // Item : Background
     //
     &.background {
-      background-color: $beige;
-      background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+      @include pastel-gradient;
 
       @media (min-width:589px) and (max-width: $screen__s) {
         grid-column: span 2;
@@ -99,8 +89,7 @@
     // Item : Community
     //
     &.community {
-      background-color: $rouge;
-      background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+      @include aqua-gradient;
 
       // 589 to 660
       @media (min-width:589px) and (max-width: $screen__s) {
@@ -122,16 +111,14 @@
     // Item : Fun Stuff
     //
     &.fun-stuff {
-      background-color: $yellow;
-      background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
+      @include yellow-gradient;
     }
     
     //
     // Item : Proud Stuff
     //
     &.proud-stuff {
-      background-color: $lightpink;
-      background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
+      @include pink-gradient;
       grid-column: 1 / -1;
       
       @media (min-width: $screen__s + 3px) {
@@ -141,7 +128,7 @@
       @media (min-width: $screen__l) {
         grid-column: span 2;
       }
-      
     }
   }
+
 }

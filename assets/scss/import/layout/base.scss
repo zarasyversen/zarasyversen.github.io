@@ -1,5 +1,5 @@
 body {
-  background: $gray;
+  background: $color--light-grey;
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
@@ -37,21 +37,18 @@ button {
 }
 
 .page__content {
+  padding: $indent__s;
   background: white;
-  padding: $indent;
+
+  .wrapper {
+    background: white;
+    margin: 0;
+  }
 }
 
 .heading {
   margin: 0;
-  font-size: 25px;
   display: inline-block;
-  color: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @media(min-width: $screen__s){
-    font-size: 40px;
-  }
 }
 
 h3 {
