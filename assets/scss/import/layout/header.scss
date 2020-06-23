@@ -23,6 +23,7 @@
   }
 
   @media(min-width: $screen__l) {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     margin: 0 auto $indent__l;
