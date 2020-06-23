@@ -4,14 +4,14 @@
 
 .page__header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0 auto;
   position: relative;
-  max-width: $wrapper__max-width;
-  padding: 0 0 $indent__s;
+  padding: $indent__s 0;
+  background: white;
 
   .home & {
+    background: transparent;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -19,13 +19,16 @@
 
     h1, h2 {
       margin: 0;
-      color: white;
     }
   }
 
-  @media(min-width: $screen__l){
+  @media(min-width: $screen__l) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     margin: 0 auto $indent__l;
     padding: 0;
+    border-bottom: 1px solid lighten($gray, 60%);
 
     .home & {
       flex-direction: row;
