@@ -1,8 +1,7 @@
-.about__wrapper {
-  display: flex;
+.wrapper--about {
 
-  @media(max-width: $screen__s){
-    flex-wrap: wrap;
+  @media(min-width: $screen__l) {
+    display: flex;
   }
 
   img {

@@ -1,0 +1,35 @@
+
+@mixin gradient-background-properties {
+  background-size: 200%;
+  background-position: center left;
+  transition: background-position .8s;
+  
+  &:hover {
+    background-position: center right;
+  }
+}
+
+@mixin yellow-gradient {
+  background-color: $yellow;
+  background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
+}
+
+@mixin pink-gradient {
+  background-color: $lightpink;
+  background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
+}
+
+@mixin aqua-gradient {
+  background-color: $rouge;
+  background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+}
+
+@mixin mint-gradient {
+  background-color: $mint;
+  background-image: linear-gradient(60deg, $mint 15%, $pink 100%);
+}
+
+@mixin pastel-gradient {
+  background-color: $beige;
+  background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+}
