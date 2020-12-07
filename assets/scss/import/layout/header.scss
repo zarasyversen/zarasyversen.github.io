@@ -11,8 +11,10 @@
   background: white;
 
   .home & {
+    width: 100%;
     background: transparent;
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
     margin: $indent__l auto 0;
@@ -23,9 +25,6 @@
   }
 
   @media(min-width: $screen__l) {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     margin: 0 auto $indent__l;
     padding: 0;
     border-bottom: 1px solid lighten($gray, 60%);
@@ -33,6 +32,7 @@
     .home & {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
     }
   }
 }

@@ -7,6 +7,11 @@
     .link {
       background-color: $mint;
     }
+
+    .image {
+      box-shadow: -5px 5px 0 $mint,
+      -10px 10px 0 lighten($pink, 20%);
+    }
   }
 
   &--blush {
@@ -23,6 +28,11 @@
     .link {
       background-color: $green;
     }
+
+    .image {
+      box-shadow: -5px 5px 0 $purple,
+      -10px 10px 0 lighten($green, 20%);
+    }
   }
 
   &--bright {
@@ -33,6 +43,11 @@
 
     .link {
       background-color: $yellow;
+    }
+
+    .image {
+      box-shadow: -5px 5px 0 $yellow,
+      -10px 10px 0 lighten($yellow, 20%);
     }
   }
 
