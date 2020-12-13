@@ -3,10 +3,14 @@
   max-width: 100%;
 }
 
+figure {
+  margin: $indent__s;
+}
+
 .image-gallery {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x;
+  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
   &__item {

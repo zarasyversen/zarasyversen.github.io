@@ -30,12 +30,6 @@ button {
   cursor: pointer;
 }
 
-.wrapper {
-  max-width: $wrapper__max-width;
-  margin: 0 auto 50px;
-  padding: $indent;
-}
-
 .page__section {
   min-height: 100vh;
   display: flex;
@@ -47,19 +41,37 @@ button {
   padding: $indent__s;
   background: white;
 
+  @media (min-width: $screen__l){
+    padding: $indent;
+  }
+
   .wrapper {
     background: white;
     margin: 0;
+    padding: $indent__s;
   }
 
   h2 {
     font-size: 2em;
     margin-bottom: 0;
   }
+}
 
-  .home & {
+.wrapper {
+  max-width: $wrapper__max-width;
+  margin: 0 auto 50px;
+
+  @media (min-width: $screen__l){
     padding: $indent;
   }
+  
+  &--padded {
+    padding: $indent;
+  }
+
+  
+
+  
 }
 
 .heading {
