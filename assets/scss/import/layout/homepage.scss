@@ -12,7 +12,7 @@
     min-height: 400px;
     margin: 0 auto;
     grid-gap: $indent;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   
   //
@@ -84,10 +84,6 @@
     &.background {
       @include pastel-gradient;
 
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-
       @media (min-width: $screen__l) {
         grid-row: span 2;
       }
@@ -100,18 +96,13 @@
     &.community {
       @include aqua-gradient;
 
-      // 589 to 660
-      @media (min-width:589px) and (max-width: $screen__s) {
-        grid-column: span 2;
-      }
-      
-
-      @media (min-width: $screen__m){
+      @media (min-width: 935px){
         grid-column: span 2;
       }
       
        @media (min-width: $screen__l) {
         grid-row: span 3;
+        grid-column: auto;
       }
 
     }
@@ -129,8 +120,12 @@
     &.proud-stuff {
       @include pink-gradient;
       grid-column: 1 / -1;
+
+      @media (min-width: 715px) {
+        grid-column: span 2;
+      }
       
-      @media (min-width: $screen__s + 3px) {
+      @media (min-width: $screen__m) {
         grid-column: 2 / -1;
       }
       
