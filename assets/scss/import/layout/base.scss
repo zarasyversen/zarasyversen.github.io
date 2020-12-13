@@ -30,14 +30,19 @@ button {
   cursor: pointer;
 }
 
-.page__section {
+.section:not(.section--first) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1500px;
+}
+
+.section--first {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.page__content {
+.section__content {
   padding: $indent__s;
   background: white;
 

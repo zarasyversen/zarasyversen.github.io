@@ -1,6 +1,6 @@
 .theme {
   &--pastel {
-    .page__content {
+    .section__content {
       background-image: linear-gradient(60deg, $mint 45%, $pink 100%);
     }
 
@@ -15,7 +15,7 @@
   }
 
   &--blush {
-    .page__content {
+    .section__content {
       background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
     }
 
@@ -26,7 +26,7 @@
   }
 
   &--nature {
-    .page__content {
+    .section__content {
       background-image: linear-gradient(90deg, $purple 15%, $green 100%);
     }
 
@@ -42,7 +42,7 @@
 
   &--bright {
 
-    .page__content {
+    .section__content {
       background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
     }
 
@@ -58,7 +58,7 @@
 
   &--fire {
    
-    .page__content {
+    .section__content {
       background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
     }
 
