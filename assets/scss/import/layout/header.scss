@@ -2,6 +2,27 @@
 // Nav : Page Navigation
 //
 
+.section--first {
+  position: relative;
+}
+.skip-link {
+  background: $black;
+  text-align: center;
+  color: #fff;
+  top: 0;
+  left: 0;
+  padding: $indent__s;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform .3s;
+
+  &:focus { 
+    transform: translateY(0%);
+    outline-color: $black;
+  }
+}
+
+
 .header {
   width: 100%;
   display: flex;

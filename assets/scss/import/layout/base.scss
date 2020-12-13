@@ -31,9 +31,7 @@ button {
 }
 
 .section {
-
   @media (min-width: $screen__l){
-    padding: $indent;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -59,7 +57,6 @@ button {
   padding: $indent__s;
   background: white;
 
-
   .section--first & {
     box-shadow: 0px -12px 0px 0px white;
   }
@@ -76,7 +73,6 @@ button {
     }
   }
 
-
   h2 {
     font-size: 2em;
     margin-bottom: 0;
@@ -92,7 +88,9 @@ button {
   margin: 0 auto;
 
   @media (min-width: $screen__l) {
-    padding: $indent;
+    &:not(.section--first) {
+      padding: $indent;
+    }
   }
   
   &--padded {
