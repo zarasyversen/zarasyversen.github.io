@@ -1,0 +1,27 @@
+.image:not(.image-gallery__image) {
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  -webkit-overflow-scrolling: touch;
+
+  &__item {
+    scroll-snap-align: start;
+    margin: 15px;
+  }
+
+  &__image {
+    max-height: 200px;
+
+    @media (min-width: $screen__s){
+      max-height: none;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+

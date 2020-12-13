@@ -93,27 +93,6 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
-.image {
-  width: 100%;
-  max-width: 100%;
-}
-
-.image-wrapper {
-
-  figure {
-    margin: 15px 0;
-  }
-
-  @media (min-width: $screen__s){
-    display: flex;
-
-    figure {
-      margin: 0 15px;
-    }
-  }
-
-}
-
 .list {
   list-style: none;
   padding: 0;
