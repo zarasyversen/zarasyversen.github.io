@@ -58,8 +58,7 @@
     }
 
     .link {
-      background-color: $magenta;
-      color: white;
+      background-color: lighten($magenta, 30%);
     }
   }
 }
