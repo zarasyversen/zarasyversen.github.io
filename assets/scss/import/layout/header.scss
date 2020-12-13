@@ -10,20 +10,20 @@
   justify-content: space-between;
   margin: $indent__l auto 0;
   position: relative;
-  padding: $indent__s 0;
+  padding: $indent__s 0 0;
   background: transparent;
   align-items: flex-start;
 
   h1, h2 {
     margin: 0;
+    text-shadow: -2px -1px 0px #ffffff;
+    z-index: 1;
+    padding-left: $indent__xs;
   }
 
   @media(min-width: $screen__l) {
-  
     padding: 0;
-    border-bottom: 1px solid lighten($gray, 60%);
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-end;
 
     h2 {

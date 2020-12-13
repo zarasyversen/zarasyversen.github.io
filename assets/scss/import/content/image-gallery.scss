@@ -20,10 +20,11 @@ figure {
 
   &__image {
    
-    @media (min-width: $screen__s){
-      max-width: 100%;
+    @media (min-width: $screen__l){
+      width: 100%!important;
+      height: 100%!important;
     }
-    
+
   }
 }
 
