@@ -36,6 +36,13 @@ button {
   padding: $indent;
 }
 
+.page__section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .page__content {
   padding: $indent__s;
   background: white;
@@ -43,6 +50,15 @@ button {
   .wrapper {
     background: white;
     margin: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+
+  .home & {
+    padding: $indent;
   }
 }
 
@@ -80,6 +96,22 @@ p {
 .image {
   width: 100%;
   max-width: 100%;
+}
+
+.image-wrapper {
+
+  figure {
+    margin: 15px 0;
+  }
+
+  @media (min-width: $screen__s){
+    display: flex;
+
+    figure {
+      margin: 0 15px;
+    }
+  }
+
 }
 
 .list {
