@@ -13,14 +13,16 @@ function scrollFunction() {
   }
 
   timer = window.setTimeout(function() {
-		const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
     if (currentScroll > 0 && lastScrollTop <= currentScroll) {
       lastScrollTop = currentScroll;
       topButton.classList.remove('is-active');
-    } else {
+    } else if (currentScroll > 500) {
       lastScrollTop = currentScroll;
       topButton.classList.add('is-active');
     }
+
 	}, 100);
 }
 
@@ -32,6 +34,7 @@ window.addEventListener('scroll', scrollFunction);
 //
 function scrollToTop() {
   document.documentElement.scrollTop = 0;
+  topButton.classList.remove('is-active');
 }
 
 // Add Event Listener for topButton, click to go to the top.

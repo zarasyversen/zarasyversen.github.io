@@ -59,19 +59,27 @@ $delay: 0s;
 @keyframes colours {
 
   0% {
-    fill: $pink;
+    fill: $rouge;
   }
 
-  30% {
-    fill: $purple;
+  20% {
+    fill: $orange;
+  }
+
+  40% {
+    fill: $yellow;
   }
 
   60% {
-    fill: $blue;
+    fill: $purple;
+  }
+
+  80% {
+    fill: $green;
   }
 
   100% {
-    fill: $green;
+    fill: $mint;
   }
 
 }
