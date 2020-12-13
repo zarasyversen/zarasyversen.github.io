@@ -30,6 +30,15 @@
       outline: $focus-outline
     }
 
+    h3 {
+      font-size: 20px;
+      margin: $indent 0;
+
+      @media (min-width: $screen__l){
+        font-size: 30px;
+      }
+    }
+
     //
     // After Element
     //

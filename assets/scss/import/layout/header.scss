@@ -3,36 +3,32 @@
 //
 
 .page__header {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: $indent__l auto 0;
   position: relative;
   padding: $indent__s 0;
-  background: white;
+  background: transparent;
+  align-items: flex-start;
 
-  .home & {
-    width: 100%;
-    background: transparent;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: $indent__l auto 0;
-
-    h1, h2 {
-      margin: 0;
-    }
+  h1, h2 {
+    margin: 0;
   }
 
   @media(min-width: $screen__l) {
-    margin: 0 auto $indent__l;
+  
     padding: 0;
     border-bottom: 1px solid lighten($gray, 60%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 
-    .home & {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
+    h2 {
+      font-size: 2em;
     }
+
   }
 }
