@@ -20,7 +20,6 @@ figure {
 
   &__image {
     max-height: 260px;
-    width: 260px;
 
     @media (min-width: $screen__s){
       max-height: none;

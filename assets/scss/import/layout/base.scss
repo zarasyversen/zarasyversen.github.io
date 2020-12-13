@@ -30,16 +30,16 @@ button {
   cursor: pointer;
 }
 
-.section:not(.section--first) {
-  content-visibility: auto;
-  contain-intrinsic-size: 1500px;
-}
-
-.section--first {
+.section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.section:not(.section--first) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1500px;
 }
 
 .section__content {
