@@ -18,6 +18,11 @@
     .page__content {
       background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
     }
+
+    .image {
+      box-shadow: -5px 5px 0 lighten($rouge, 10%),
+      -10px 10px 0 $beige;
+    }
   }
 
   &--nature {
