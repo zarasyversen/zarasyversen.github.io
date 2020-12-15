@@ -136,10 +136,6 @@
       @include pink-gradient;
       grid-column: 1 / -1;
       
-      // @media (min-width: $screen__m) {
-      //   grid-column: 2 / -1;
-      // }
-      
       @media (min-width: $screen__l) {
         grid-column: span 2;
       }
