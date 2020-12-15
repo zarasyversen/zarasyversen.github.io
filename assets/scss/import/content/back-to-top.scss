@@ -18,7 +18,7 @@
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
 
-  transform: translateY(100%);
+  transform: translateY(120%);
   transition: transform 1s, box-shadow .5s;
 
   box-shadow: 0px 0px 0px 2px $purple, 0px 0px 0px 4px $yellow;
@@ -29,6 +29,7 @@
 
   &__icon {
     width: 100%;
+    min-width: 40px; // need this for ios? 
     transform: rotate(90deg);
     transition: transform .8s;
   }
