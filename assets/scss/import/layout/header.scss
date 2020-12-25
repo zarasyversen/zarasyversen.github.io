@@ -40,6 +40,7 @@
     text-shadow: -2px -1px 0px #ffffff;
     z-index: 1;
     padding-left: $indent__xs;
+    transition: color .3s;
   }
 
   @media(min-width: $screen__l) {

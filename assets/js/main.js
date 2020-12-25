@@ -1,5 +1,3 @@
-/*eslint-disable*/
-
 const topButton = document.getElementById('go-top-button');
 let lastScrollTop = 0;
 let timer;
@@ -39,3 +37,22 @@ function scrollToTop() {
 
 // Add Event Listener for topButton, click to go to the top.
 topButton.addEventListener('click', scrollToTop);
+
+
+//
+// Dark/Light Mode Switch
+//
+const colourSwitch = document.querySelector('#colour-switch');
+const body = document.querySelector('body');
+
+function changeColourMode() {
+
+  if (body.classList.contains('dark-mode')) {
+    body.classList.remove('dark-mode');
+  } else {
+    body.classList.add('dark-mode');
+  }
+
+}
+
+colourSwitch.addEventListener('click', changeColourMode);

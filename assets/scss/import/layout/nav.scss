@@ -33,12 +33,17 @@
     @include gradient-background-properties;
 
     &:focus {
-      outline: $focus-outline
+      outline: $focus-outline;
+
+      .dark-mode & {
+        outline: $focus-light-outline;
+      }
     }
 
     h3 {
       font-size: 20px;
       margin: $indent 0;
+      transition: color .3s;
 
       @media (min-width: $screen__l){
         font-size: 30px;
