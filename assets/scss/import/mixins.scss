@@ -33,3 +33,43 @@
   background-color: $beige;
   background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
 }
+
+//
+// Current
+//
+@mixin dark-blue-gradient {
+  background-color: $dark-blue;
+  background-image: linear-gradient(40deg, $dark-red 2%, $dark-green 10%, $dark-purple 50%, $dark-blue 100%);
+}
+
+//
+// Community
+//
+@mixin dark-purple-gradient {
+  background-color: $dark-purple;
+  background-image: linear-gradient(40deg, $dark-blue 10%, $dark-red 40%, $dark-purple 80%, $dark-green 100%);
+}
+
+//
+// Fun Stuff
+//
+@mixin dark-bloom-gradient {
+  background-color: $dark-bloom;
+  background-image: linear-gradient(40deg, $dark-red 30%, $dark-green 60%, $dark-bloom 100%);
+}
+
+//
+// Proud Stuff
+//
+@mixin dark-red-gradient {
+  background-color: $dark-red;
+  background-image: linear-gradient(70deg, $dark-green 5%, $dark-blue 30%, $dark-red 100%);
+}
+
+//
+// Background
+//
+@mixin dark-pink-gradient {
+  background-color: $dark-pink;
+  background-image: linear-gradient(30deg, $dark-blue 10%, $dark-red 60%, $dark-pink 100%);
+}

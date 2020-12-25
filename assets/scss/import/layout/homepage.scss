@@ -57,6 +57,10 @@
         height: 5px;
         background: black;
         transition: .5s;
+
+        .dark-mode & {
+          background: white;
+        }
       }
   
       &:hover {
@@ -78,6 +82,10 @@
     &.current {
       @include mint-gradient;
 
+      .dark-mode & {
+        @include dark-blue-gradient;
+      }
+
       @media (min-width: $screen__l) {
         grid-column: span 2;
         grid-row: span 2;
@@ -90,6 +98,10 @@
     &.background {
       @include pastel-gradient;
 
+      .dark-mode & {
+        @include dark-pink-gradient;
+      }
+
       @media (min-width: $screen__l) {
         grid-row: span 2;
       }
@@ -101,6 +113,10 @@
     //
     &.community {
       @include aqua-gradient;
+
+      .dark-mode & {
+        @include dark-purple-gradient;
+      }
 
       @media (min-width: 700px) {
         grid-row: span 2;
@@ -120,6 +136,10 @@
     &.fun-stuff {
       @include yellow-gradient;
 
+      .dark-mode & {
+        @include dark-bloom-gradient;
+      }
+
       @media (min-width: 700px) {
         grid-column: span 2;
       }
@@ -135,6 +155,10 @@
     &.proud-stuff {
       @include pink-gradient;
       grid-column: 1 / -1;
+
+      .dark-mode & {
+        @include dark-red-gradient;
+      }
       
       @media (min-width: $screen__l) {
         grid-column: span 2;
