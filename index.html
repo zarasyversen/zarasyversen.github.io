@@ -10,11 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦖</text></svg>">
+    <script>
+      if (localStorage.getItem("theme") === 'dark') {
+        var css = "body { background-color: #000;} h1, h2, h3 { color: #f1f1f1 }",
+        head = document.head || document.getElementsByTagName('head')[0],
+        style = document.createElement('style');
+        head.appendChild(style);
+        style.type = 'text/css';
+        style.appendChild(document.createTextNode(css));        
+      }
+    </script>
   </head>
   <body>
     <header class="wrapper section section--first">
       <a class="link skip-link" href='#maincontent'>Skip to content</a>
       <div class="header">
+        <button type="button" class="colour-switch" id="colour-switch">
+          <span class="colour-switch__content colour-switch__content--light">
+            <span class="visually-hidden">Change to light mode</span>
+            ✨
+          </span>
+          <span class="colour-switch__content colour-switch__content--dark">
+            <span class="visually-hidden">Change to dark mode</span>
+            👻
+          </span>
+        </button>
         <h1>Zara Syversen</h1>
         <h2>Developer</h2>
       </div>

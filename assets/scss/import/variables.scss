@@ -4,7 +4,6 @@ $mint: #D2F1E4;
 $lightpink: #FBCAEF;
 $pink: #F865B0;
 $purple: #e191f3;
-
 $blue: #083D77;
 $green: #5de292;
 $beige: #EBEBD3;
@@ -12,10 +11,16 @@ $rouge: #f993ac;
 $yellow: #F4D35E;
 $orange: #F78764;
 
-$gray: #56494E;
-$color-theme-2: #33cccc;
+$darkmode: #191919;
+$dark-blue: #061e3e;
+$dark-purple: #251e3e;
+$dark-bloom: #451e3e;
+$dark-red: #651f3e;
+$dark-pink: #3e071f;
+$dark-green: #073732;
+$dark-gray: #222e32;
+
 $color--light-grey: #f1f1f1;
-$color--fuschia: #eb01a5;
 $black: #000;
 
 // Spacing
@@ -29,6 +34,7 @@ $wrapper__max-width: 1000px;
 
 // Focus
 $focus-outline: 4px dotted $black;
+$focus-light-outline: 4px dotted $color--light-grey;
 
 // Responsive 
 $screen__l: 1000px;

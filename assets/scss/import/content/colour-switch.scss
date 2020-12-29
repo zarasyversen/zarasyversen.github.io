@@ -1,0 +1,71 @@
+//
+// Colour Switch
+//
+.colour-switch {
+  width: 50px;
+  height: 50px;
+  font-size: 1.8em;
+  transition: background-color .3s, border .5s;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 0;
+ 
+  @media(min-width: $screen__l) {
+    top: 0;
+    left: -60px;
+    right: auto;
+  }
+
+  //
+  // Hover
+  //
+  &:hover {
+    background-color: $mint;
+    border: 1px solid $black;
+
+    .dark-mode & {
+      background-color: $dark-gray;
+      border: 1px solid $color--light-grey;
+    }
+  }
+
+  //
+  // Focus
+  //
+  &:focus {
+    outline: none;
+    background-color: $mint;
+    border: 1px solid $black;
+
+    .dark-mode & {
+      background-color: $dark-gray;
+      border: 1px solid $color--light-grey;
+    }
+  }
+
+  //
+  // Content
+  //
+  &__content {
+
+    // Light
+    &--light {
+      display: none;
+
+      .dark-mode & {
+        display: block;
+      }
+    }
+
+    // Dark
+    &--dark {
+      display: block;
+
+      .dark-mode & {
+        display: none;
+      }
+    }
+  }
+
+}
