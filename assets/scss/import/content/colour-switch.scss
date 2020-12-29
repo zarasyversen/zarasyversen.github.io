@@ -2,8 +2,11 @@
 // Colour Switch
 //
 .colour-switch {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
   font-size: 1.8em;
   transition: background-color .3s, border .5s;
   border-radius: 50%;
