@@ -20,7 +20,8 @@ $dark-pink: #3e071f;
 $dark-green: #073732;
 $dark-gray: #222e32;
 
-$color--light-grey: #f1f1f1;
+$white: #fff;
+$light-grey: #f1f1f1;
 $black: #000;
 
 // Spacing
@@ -34,7 +35,7 @@ $wrapper__max-width: 1000px;
 
 // Focus
 $focus-outline: 4px dotted $black;
-$focus-light-outline: 4px dotted $color--light-grey;
+$focus-light-outline: 4px dotted $light-grey;
 
 // Responsive 
 $screen__l: 1000px;

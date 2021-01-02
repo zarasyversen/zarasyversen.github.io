@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto&display=swap');
+
 @import 'import/variables';
 @import 'import/keyframes';
 @import 'import/mixins';
+
 @import 'import/layout/base';
 @import 'import/layout/typography';
 @import 'import/layout/header';
 @import 'import/layout/nav';
-@import 'import/themes';
-@import 'import/darkmode';
+@import 'import/layout/themes';
+@import 'import/layout/darkmode';
+
 @import 'import/content/image-gallery.scss';
 @import 'import/content/back-to-top.scss';
 @import 'import/content/colour-switch.scss';

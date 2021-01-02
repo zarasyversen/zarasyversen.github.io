@@ -1,7 +1,11 @@
 .theme {
   &--pastel {
     .section__content {
-      background-image: linear-gradient(0deg, $mint 45%, $color--light-grey 100%);
+      background-image: linear-gradient(
+        0deg,
+        $mint 45%,
+        $light-grey 100%
+      );
     }
 
     .link {
@@ -15,7 +19,12 @@
 
   &--nature {
     .section__content {
-      background-image: linear-gradient(0deg, $purple 15%, $green 60%, $mint 100%);
+      background-image: linear-gradient(
+        0deg,
+        $purple 15%,
+        $green 60%,
+        $mint 100%
+      );
     }
 
     .link {
@@ -28,9 +37,13 @@
   }
 
   &--bright {
-
     .section__content {
-      background-image: linear-gradient(180deg, $purple 35%, $beige 70%, $yellow 100%);
+      background-image: linear-gradient(
+        180deg,
+        $purple 35%,
+        $beige 70%,
+        $yellow 100%
+      );
     }
 
     .link {
@@ -43,9 +56,13 @@
   }
 
   &--fire {
-   
     .section__content {
-      background-image: linear-gradient(180deg, $yellow 15%, $orange 70%, $rouge 100%);
+      background-image: linear-gradient(
+        180deg,
+        $yellow 15%,
+        $orange 70%,
+        $rouge 100%
+      );
     }
 
     .link {
@@ -61,7 +78,7 @@
     .section__content {
       background-image: linear-gradient(0deg, $beige 30%, $rouge 100%);
     }
-  
+
     .image {
       border-image: linear-gradient(to right, $rouge, $beige) 1;
     }
@@ -86,6 +103,6 @@
   }
 
   &--pink {
-     @include pink-gradient;
+    @include pink-gradient;
   }
 }
