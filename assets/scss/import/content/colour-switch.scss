@@ -8,13 +8,13 @@
   width: 60px;
   height: 60px;
   font-size: 1.8em;
-  transition: background-color .3s, border .5s;
+  transition: background-color 0.3s, border 0.5s;
   border-radius: 50%;
 
   position: absolute;
   right: 0;
- 
-  @media(min-width: $screen__l) {
+
+  @media (min-width: $screen__l) {
     top: 0;
     left: -60px;
     right: auto;
@@ -29,7 +29,7 @@
 
     .dark-mode & {
       background-color: $dark-gray;
-      border: 1px solid $color--light-grey;
+      border: 1px solid $light-grey;
     }
   }
 
@@ -43,7 +43,7 @@
 
     .dark-mode & {
       background-color: $dark-gray;
-      border: 1px solid $color--light-grey;
+      border: 1px solid $light-grey;
     }
   }
 
@@ -51,7 +51,6 @@
   // Content
   //
   &__content {
-
     // Light
     &--light {
       display: none;
@@ -70,5 +69,4 @@
       }
     }
   }
-
 }

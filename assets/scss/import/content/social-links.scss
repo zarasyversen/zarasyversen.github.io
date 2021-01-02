@@ -1,0 +1,37 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  margin: $indent__l 0 10px;
+
+  a {
+    text-decoration: none;
+    display: block;
+    margin: 0 10px;
+
+    &:hover,
+    &:focus {
+      .linkedin {
+        fill: #0077b5;
+      }
+
+      .twitter {
+        fill: #1da1f2;
+      }
+
+      .github {
+        fill: #ea4aaa;
+      }
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $black;
+    transition: fill .3s;
+
+    .dark-mode & {
+      fill: white;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.theme {
+  &--pastel {
+    .section__content {
+      background-image: linear-gradient(
+        0deg,
+        $mint 45%,
+        $light-grey 100%
+      );
+    }
+
+    .link {
+      background-color: $mint;
+    }
+
+    .image {
+      border-image: linear-gradient(to bottom, $mint, lighten($pink, 20%)) 1;
+    }
+  }
+
+  &--nature {
+    .section__content {
+      background-image: linear-gradient(
+        0deg,
+        $purple 15%,
+        $green 60%,
+        $mint 100%
+      );
+    }
+
+    .link {
+      background-color: $green;
+    }
+
+    .image {
+      border-image: linear-gradient(80deg, $purple, lighten($green, 20%)) 1;
+    }
+  }
+
+  &--bright {
+    .section__content {
+      background-image: linear-gradient(
+        180deg,
+        $purple 35%,
+        $beige 70%,
+        $yellow 100%
+      );
+    }
+
+    .link {
+      background-color: $yellow;
+    }
+
+    .image {
+      border-image: linear-gradient(to top, $yellow, lighten($yellow, 20%)) 1;
+    }
+  }
+
+  &--fire {
+    .section__content {
+      background-image: linear-gradient(
+        180deg,
+        $yellow 15%,
+        $orange 70%,
+        $rouge 100%
+      );
+    }
+
+    .link {
+      background-color: lighten($orange, 10%);
+    }
+
+    .image {
+      border-image: linear-gradient(to left, $rouge, $orange, $yellow) 1;
+    }
+  }
+
+  &--blush {
+    .section__content {
+      background-image: linear-gradient(0deg, $beige 30%, $rouge 100%);
+    }
+
+    .image {
+      border-image: linear-gradient(to right, $rouge, $beige) 1;
+    }
+  }
+}
+
+.background {
+  &--yellow {
+    @include yellow-gradient;
+  }
+
+  &--mint {
+    @include mint-gradient;
+  }
+
+  &--pastel {
+    @include pastel-gradient;
+  }
+
+  &--aqua {
+    @include aqua-gradient;
+  }
+
+  &--pink {
+    @include pink-gradient;
+  }
+}
