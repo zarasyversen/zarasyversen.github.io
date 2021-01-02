@@ -7,8 +7,14 @@
     color: $color--light-grey;
   }
 
-  .image {
-    border: 1px solid $color--light-grey;
+  .github {
+    &--light {
+      display: block;
+    }
+
+    &--dark {
+      display: none;
+    }
   }
 
   .header h1, .header h2 {
@@ -47,8 +53,7 @@
       }
 
       .image {
-        box-shadow: -5px 5px 0 lighten($dark-blue, 10%),
-        -10px 10px 0 $dark-blue;
+        border-image: linear-gradient(to left, lighten($dark-blue, 10%), lighten($dark-blue, 20%)) 1;
       }
 
       .link {
@@ -68,8 +73,7 @@
       }
   
       .image {
-        box-shadow: -5px 5px 0 lighten($dark-purple, 10%),
-        -10px 10px 0 $dark-purple;
+        border-image: linear-gradient(to bottom, lighten($dark-purple, 10%), lighten($dark-purple, 20%)) 1;
       }
     }
 
@@ -85,8 +89,7 @@
       }
   
       .image {
-        box-shadow: -5px 5px 0 lighten($dark-bloom, 10%),
-        -10px 10px 0 $dark-bloom;
+        border-image: linear-gradient(to bottom, lighten($dark-bloom, 10%), lighten($dark-bloom, 30%)) 1;
       }
     }
 
@@ -102,8 +105,7 @@
       }
   
       .image {
-        box-shadow: -5px 5px 0 lighten($dark-red, 10%),
-        -10px 10px 0 $dark-red;
+        border-image: linear-gradient(to right, lighten($dark-red, 10%), lighten($dark-red, 30%)) 1;
       }
     }
 
@@ -118,8 +120,7 @@
       }
   
       .image {
-        box-shadow: -5px 5px 0 lighten($dark-pink, 10%),
-        -10px 10px 0 $dark-pink;
+        border-image: linear-gradient(40deg, lighten($dark-pink, 10%), lighten($dark-pink, 30%)) 1;
       }
       
     }
