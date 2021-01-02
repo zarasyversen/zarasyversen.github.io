@@ -4,7 +4,12 @@
 }
 
 figure {
-  margin: $indent__s;
+  margin: 0;
+}
+
+.image {
+  margin-top: $indent__l/2;
+  border: 5px solid;
 }
 
 .image-gallery {
@@ -12,19 +17,20 @@ figure {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: $indent__s;
 
   &__item {
     scroll-snap-align: start;
-    margin: 15px;
+
+    &:not(:last-child) {
+      margin-right: $indent__l/2;
+    }
   }
 
   &__image {
-   
-    @media (min-width: $screen__l){
-      width: 100%!important;
-      height: 100%!important;
+    @media (min-width: $screen__l) {
+      width: 100%;
+      height: auto;
     }
-
   }
 }
-
