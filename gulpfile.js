@@ -1,18 +1,13 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-dart-sass');
 const browserSync = require('browser-sync').create();
  
 // Style
 function style() {
     return gulp.src('./assets/scss/main.scss')
-        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(cleanCSS())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 // Watch for file changes
