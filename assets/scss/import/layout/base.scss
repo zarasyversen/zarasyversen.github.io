@@ -3,6 +3,22 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   transition: background-color .2s;
+
+  &:not(.dark-mode) {
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    background-image: linear-gradient(
+      -180deg,
+      $orange,
+      $rouge,
+      $beige,
+      $yellow,
+      $purple,
+      $mint,
+      $light-grey
+    )
+  }
+  
 }
 
 html {

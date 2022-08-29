@@ -18,7 +18,10 @@ h3 {
 .link {
   color: $black;
   text-decoration: none;
-  padding: 0 $indent__xs;
+
+  .dark-mode & {
+    color: $white;
+  }
 
   &:focus,
   &:hover {
