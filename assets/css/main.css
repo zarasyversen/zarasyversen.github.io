@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto&display=swap');
+@import '@fontsource/lato/900.css';
 
 @import './variables.css';
 
