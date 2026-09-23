@@ -40,7 +40,7 @@
     background-color: var(--mint);
     background-image: linear-gradient(60deg, var(--mint) 15%, var(--pink) 100%);
 
-    .dark-mode & {
+    [data-theme="dark"] & {
       background-color: var(--dark-blue);
       background-image: linear-gradient(
         40deg,
@@ -61,7 +61,7 @@
     background-color: var(--beige);
     background-image: linear-gradient(10deg, var(--beige) 10%, var(--rouge) 100%);
 
-    .dark-mode & {
+    [data-theme="dark"] & {
       background-color: var(--dark-pink);
       background-image: linear-gradient(
         30deg,
@@ -80,7 +80,7 @@
     background-color: var(--rouge);
     background-image: linear-gradient(60deg, var(--green) 15%, var(--purple) 100%);
 
-    .dark-mode & {
+    [data-theme="dark"] & {
       background-color: var(--dark-purple);
       background-image: linear-gradient(
         40deg,
@@ -109,7 +109,7 @@
     background-color: var(--yellow);
     background-image: linear-gradient(40deg, var(--yellow) 35%, var(--beige) 100%);
 
-    .dark-mode & {
+    [data-theme="dark"] & {
       background-color: var(--dark-bloom);
       background-image: linear-gradient(
         40deg,

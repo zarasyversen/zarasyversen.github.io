@@ -11,14 +11,16 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦖</text></svg>">
     <script>
-      if (localStorage.getItem("theme") === 'dark') {
-        var css = "body { background-color: #000;} h1, h2, h3 { color: #f1f1f1 }",
-        head = document.head || document.getElementsByTagName('head')[0],
-        style = document.createElement('style');
-        head.appendChild(style);
-        style.type = 'text/css';
-        style.appendChild(document.createTextNode(css));        
-      }
+      // Set the theme before the page renders to avoid a flash of the wrong colours.
+      // Uses the visitor's saved choice, otherwise their OS setting.
+      (function () {
+        var theme = null;
+        try { theme = localStorage.getItem('theme'); } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
     </script>
   </head>
   <body>

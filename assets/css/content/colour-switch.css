@@ -18,13 +18,8 @@
 
   &:hover,
   &:focus {
-    background-color: var(--mint);
-    border: 1px solid var(--black);
-
-    .dark-mode & {
-      background-color: var(--dark-gray);
-      border: 1px solid var(--light-grey);
-    }
+    background-color: var(--switch-hover-bg);
+    border: 1px solid var(--switch-hover-border);
   }
 
   &:focus {
@@ -35,7 +30,7 @@
 .colour-switch__content--light {
   display: none;
 
-  .dark-mode & {
+  [data-theme="dark"] & {
     display: block;
   }
 }
@@ -43,7 +38,7 @@
 .colour-switch__content--dark {
   display: block;
 
-  .dark-mode & {
+  [data-theme="dark"] & {
     display: none;
   }
 }
