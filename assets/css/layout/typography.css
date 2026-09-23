@@ -1,0 +1,30 @@
+h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin: var(--indent) 0 0;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.link {
+  color: var(--black);
+  text-decoration: none;
+
+  .dark-mode & {
+    color: var(--white);
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}

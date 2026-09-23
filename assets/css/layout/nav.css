@@ -1,0 +1,126 @@
+/*
+  Homepage navigation grid
+*/
+.nav__container {
+  display: grid;
+  min-height: 400px;
+  margin: 0 auto;
+  gap: var(--indent);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.nav__item {
+  padding: var(--indent);
+  color: var(--black);
+  text-decoration: none;
+  position: relative;
+  background-size: 200%;
+  background-position: center left;
+  transition: background-position 0.8s;
+
+  &:hover {
+    background-position: center right;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: var(--indent) 0;
+    transition: color 0.3s;
+
+    @media (min-width: 1000px) {
+      font-size: 30px;
+    }
+  }
+
+  &.current {
+    background-color: var(--mint);
+    background-image: linear-gradient(60deg, var(--mint) 15%, var(--pink) 100%);
+
+    .dark-mode & {
+      background-color: var(--dark-blue);
+      background-image: linear-gradient(
+        40deg,
+        var(--dark-red) 2%,
+        var(--dark-green) 10%,
+        var(--dark-purple) 50%,
+        var(--dark-blue) 100%
+      );
+    }
+
+    @media (min-width: 1000px) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  &.background {
+    background-color: var(--beige);
+    background-image: linear-gradient(10deg, var(--beige) 10%, var(--rouge) 100%);
+
+    .dark-mode & {
+      background-color: var(--dark-pink);
+      background-image: linear-gradient(
+        30deg,
+        var(--dark-blue) 10%,
+        var(--dark-red) 60%,
+        var(--dark-pink) 100%
+      );
+    }
+
+    @media (min-width: 1000px) {
+      grid-row: span 2;
+    }
+  }
+
+  &.community {
+    background-color: var(--rouge);
+    background-image: linear-gradient(60deg, var(--green) 15%, var(--purple) 100%);
+
+    .dark-mode & {
+      background-color: var(--dark-purple);
+      background-image: linear-gradient(
+        40deg,
+        var(--dark-blue) 10%,
+        var(--dark-red) 40%,
+        var(--dark-purple) 80%,
+        var(--dark-green) 100%
+      );
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    @media (min-width: 700px) {
+      grid-column: 3 / -1;
+    }
+
+    @media (min-width: 1000px) {
+      grid-row: span 3;
+      grid-column: 4 / -1;
+    }
+  }
+
+  &.fun-stuff {
+    background-color: var(--yellow);
+    background-image: linear-gradient(40deg, var(--yellow) 35%, var(--beige) 100%);
+
+    .dark-mode & {
+      background-color: var(--dark-bloom);
+      background-image: linear-gradient(
+        40deg,
+        var(--dark-red) 30%,
+        var(--dark-green) 60%,
+        var(--dark-bloom) 100%
+      );
+    }
+
+    @media (min-width: 700px) {
+      grid-column: span 3;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.dark-mode {
+  background-color: var(--black);
+  color: var(--light-grey);
+
+  h1,
+  h2,
+  h3 {
+    color: var(--light-grey);
+  }
+
+  .header h1,
+  .header h2 {
+    text-shadow: -2px -1px 0 var(--darkmode);
+  }
+
+  .section--first .section__content {
+    box-shadow: 0 -12px 0 0 var(--darkmode);
+    background: var(--darkmode);
+  }
+}

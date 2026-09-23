@@ -1,0 +1,36 @@
+/*
+  Breakpoints can't use custom properties, so media queries use 1000px directly.
+*/
+:root {
+  /* Colours */
+  --mint: #d2f1e4;
+  --pink: #f865b0;
+  --purple: #e191f3;
+  --green: #5de292;
+  --beige: #ebebd3;
+  --rouge: #f993ac;
+  --yellow: #f4d35e;
+  --orange: #f78764;
+
+  --darkmode: #191919;
+  --dark-blue: #061e3e;
+  --dark-purple: #251e3e;
+  --dark-bloom: #451e3e;
+  --dark-red: #651f3e;
+  --dark-pink: #3e071f;
+  --dark-green: #073732;
+  --dark-gray: #222e32;
+
+  --white: #fff;
+  --light-grey: #f1f1f1;
+  --black: #000;
+
+  /* Spacing */
+  --indent-l: 30px;
+  --indent: 20px;
+  --indent-s: 10px;
+  --indent-xs: 5px;
+
+  /* Layout */
+  --wrapper-max-width: 1000px;
+}

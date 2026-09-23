@@ -2,9 +2,10 @@
   "name": "zarasyv",
   "version": "1.0.0",
   "description": "Personal website",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,7 @@
   },
   "homepage": "https://github.com/zarasyversen/zarasyversen.github.io#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.7",
-    "gulp": "^4.0.2",
-    "gulp-dart-sass": "^1.0.2"
-  }
+    "vite": "^8.3.0"
+  },
+  "type": "module"
 }
