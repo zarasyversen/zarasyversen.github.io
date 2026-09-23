@@ -1,6 +1,7 @@
 h1,
 h2,
 h3 {
+  color: var(--text);
   font-family: 'Lato', sans-serif;
 }
 
@@ -16,12 +17,8 @@ p {
 }
 
 .link {
-  color: var(--black);
+  color: var(--link);
   text-decoration: none;
-
-  .dark-mode & {
-    color: var(--white);
-  }
 
   &:focus,
   &:hover {

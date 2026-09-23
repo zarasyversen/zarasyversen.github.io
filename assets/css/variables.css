@@ -34,3 +34,42 @@
   /* Layout */
   --wrapper-max-width: 1000px;
 }
+
+/*
+  Theme
+  data-theme is set on <html> by the inline script in index.html.
+*/
+:root {
+  color-scheme: light;
+
+  --text: var(--black);
+  --page-bg: var(--light-grey);
+  --page-gradient: linear-gradient(
+    -180deg,
+    var(--orange),
+    var(--rouge),
+    var(--beige),
+    var(--yellow),
+    var(--purple),
+    var(--mint),
+    var(--light-grey)
+  );
+  --surface: var(--white);
+  --link: var(--black);
+  --icon: var(--black);
+  --switch-hover-bg: var(--mint);
+  --switch-hover-border: var(--black);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --text: var(--light-grey);
+  --page-bg: var(--black);
+  --page-gradient: none;
+  --surface: var(--darkmode);
+  --link: var(--white);
+  --icon: var(--white);
+  --switch-hover-bg: var(--dark-gray);
+  --switch-hover-border: var(--light-grey);
+}

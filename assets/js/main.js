@@ -1,33 +1,39 @@
-
-
 //
 // Dark/Light Mode Switch
 //
+// The initial theme is set by the inline script in index.html.
+//
+const root = document.documentElement;
 const colourSwitch = document.querySelector("#colour-switch");
-const body = document.querySelector("body");
+const systemDark = matchMedia("(prefers-color-scheme: dark)");
 
-function checkTheme() {
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
+function getSavedTheme() {
+  try {
+    return localStorage.getItem("theme");
+  } catch (e) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem("theme", theme);
+  } catch (e) {
+    // Storage unavailable (e.g. private mode): the choice lasts for this page only.
   }
 }
 
 function changeColourMode() {
-  // Remove style tag in head, see index.html
-  const styleTag = document.head.querySelector("style");
-  if (styleTag) {
-    styleTag.remove();
-  }
-
-  if (body.classList.contains("dark-mode")) {
-    body.classList.remove("dark-mode");
-    localStorage.setItem("theme", "light");
-  } else {
-    body.classList.add("dark-mode");
-    localStorage.setItem("theme", "dark");
-  }
+  const theme = root.dataset.theme === "dark" ? "light" : "dark";
+  root.dataset.theme = theme;
+  saveTheme(theme);
 }
 
-colourSwitch.addEventListener("click", changeColourMode);
+// Follow OS changes until the visitor picks a theme themselves.
+systemDark.addEventListener("change", (event) => {
+  if (!getSavedTheme()) {
+    root.dataset.theme = event.matches ? "dark" : "light";
+  }
+});
 
-checkTheme();
+colourSwitch.addEventListener("click", changeColourMode);
