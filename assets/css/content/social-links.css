@@ -1,0 +1,37 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  margin: var(--indent-l) 0 10px;
+
+  a {
+    text-decoration: none;
+    display: block;
+    margin: 0 10px;
+
+    &:hover .linkedin,
+    &:focus .linkedin {
+      fill: #0077b5;
+    }
+
+    &:hover .twitter,
+    &:focus .twitter {
+      fill: #1da1f2;
+    }
+
+    &:hover .github,
+    &:focus .github {
+      fill: #ea4aaa;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--black);
+    transition: fill 0.3s;
+
+    .dark-mode & {
+      fill: var(--white);
+    }
+  }
+}
